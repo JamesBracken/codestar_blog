@@ -30,7 +30,8 @@ SECRET_KEY = 'django-insecure-g@hu^$zrd8su14*8^^zclf9gy#ea-cb6ihm!$1db)rfxbf+0_0
 DEBUG = True
                   
 ALLOWED_HOSTS = ["codestar-blog-django-test-608a0368997d.herokuapp.com",
-                 "herokuapp.com",]
+                 "herokuapp.com",
+                 "127.0.0.1",]
 # ALLOWED_HOSTS = ["*"]
 
 # Application definition
