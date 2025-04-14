@@ -5,6 +5,9 @@ from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """
+    Creates admin access for :model:`blog.post`
+    """
 
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']

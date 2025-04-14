@@ -5,6 +5,11 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Creates admin access for :model:`about.About`
+
+    **Context**
+    """
     summernote_fields = ('content',)
 
 # Note: admin.ModelAdmin is the standard way of registering
@@ -16,5 +21,9 @@ class AboutAdmin(SummernoteModelAdmin):
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
+    """
+    Creates admin access for collaboration requests 
+    :model:`about.collaborateRequest`
+    """
 
     list_display = ('message', 'read',)

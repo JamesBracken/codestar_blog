@@ -8,6 +8,11 @@ STATUS = (
         (1, "Publish")
     )
 class Post(models.Model):
+    """
+    Stores a blog post entry related to :model:`auth.User`.
+
+    """
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -25,6 +30,10 @@ class Post(models.Model):
         return f" {self.title} | written by {self.author}"
 
 class Comment(models.Model):
+    """
+    Stores a comment entry related to :model:`blog.post`
+    and :model:`auth.User`
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
     body = models.TextField()
