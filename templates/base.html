@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'about_me' %}">About</a>
+                            href="{% url 'about' %}">About</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

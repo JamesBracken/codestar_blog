@@ -6,7 +6,7 @@ from django.contrib import messages
 
 # Create your views here.
 
-def about_me(request):
+def about(request):
     """
     Renders the most recent information on the website author
     and allows website collaboration requests
