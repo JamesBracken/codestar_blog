@@ -40,3 +40,5 @@ class TestBlogViews(TestCase):
             b'Comment submitted and awaiting approval',
             response.content
         )
+
+        
